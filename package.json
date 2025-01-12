@@ -3,16 +3,15 @@
   "version": "3.10.0",
   "private": true,
   "description": "Boilerplate for Advanced HTML/CSS Tools UOC students",
-  "scripts": {
-    "parcel:serve": "parcel -p 8123 --target web --open",
-    "parcel:build": "parcel build --target web --no-source-maps --no-cache",
-    "clean": "rimraf dist .cache .cache-loader .parcel-cache",
-    "build:css": "npx tailwindcss -i ./src/assets/styles/tailwind.css -o ./dist/output.css --watch",
-    "start": "npm-run-all --parallel build:css parcel:serve",
-    "dev": "npm-run-all clean start",
-    "build": "npm-run-all clean parcel:build",
-    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
-  },
+"scripts": {
+  "parcel:serve": "parcel -p 8123 --target web --open",
+  "parcel:build": "npx tailwindcss -i ./src/assets/styles/tailwind.css -o ./dist/output.css --minify && parcel build --target web --no-source-maps --no-cache",
+  "clean": "rimraf dist .cache .cache-loader .parcel-cache",
+  "build:css": "npx tailwindcss -i ./src/assets/styles/tailwind.css -o ./dist/output.css --minify",
+  "dev": "npm-run-all clean parcel:serve",
+  "build": "npm-run-all clean parcel:build",
+  "test": "echo 'Everything is working as expected ✅'"
+},
   "targets": {
     "web": {
       "context": "browser",
