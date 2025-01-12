@@ -1,27 +1,39 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="ca">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jornades de Seguretat Informàtica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../dist/output.css">
   </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  <body class="bg-background font-base text-text">
+    <header class="bg-primary text-white py-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <img src="./assets/images/logo.png" alt="Logo de les Jornades" class="h-12" />
+        <!-- Include nav component -->
+        <include src="./components/nav.html"></include>
+      </div>
+    </header>
+
+    <main>
+      <section class="relative h-screen">
+        <img src="./assets/images/event2.jpg" alt="Poster Image" class="absolute inset-0 w-full h-full object-cover z-0" />
+        <!-- Include poster-content component -->
+        <include src="./components/poster-content.html"></include>
+      </section>
+    </main>
+
+    <footer class="bg-secondary text-white py-4">
+      <div class="container mx-auto text-center">
+        <p class="mb-4">&copy; 2024 - Jornades de Seguretat Informàtica</p>
+        <ul class="flex justify-center space-x-4">
+          <li><a href="./index.html" class="hover:text-accent">Front Page</a></li>
+          <li><a href="./page2.html" class="hover:text-accent">Page Two</a></li>
+          <li><a href="./index.html" class="hover:text-accent">Page Three</a></li>
+          <li><a href="./index.html" class="hover:text-accent">Page Four</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

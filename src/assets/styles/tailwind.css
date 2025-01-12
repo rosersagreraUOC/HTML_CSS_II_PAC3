@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-primary {
+  @apply bg-primary text-white py-2 px-4 rounded hover:bg-accent transition;
+}
+
+.poster-content {
+  @apply absolute inset-0 flex flex-col items-center justify-center text-primary text-center;
+}
+
+.speakers-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-8;
+  }
+  
+  .speaker-card {
+    @apply bg-background border border-primary rounded-xl overflow-hidden shadow-md transition-transform duration-300 ease-in-out;
+  }
+  
+  .speaker-card:hover {
+    @apply -translate-y-2 shadow-lg;
+  }
+  
+  .card-img {
+    @apply w-full h-64 object-cover;
+  }
+  
+  .card-body {
+    @apply p-4 text-center;
+  }
+  
+  .card-title {
+    @apply text-xl font-bold text-primary mb-2;
+  }
+  
+  .card-text {
+    @apply text-base text-text;
+  }
+  
